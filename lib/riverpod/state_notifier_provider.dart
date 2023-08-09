@@ -51,7 +51,7 @@ class ShoppingListNotifier extends StateNotifier<List<ShoppingItemModel>> {
             ? ShoppingItemModel(
                 name: e.name,
                 quantity: e.quantity,
-                hasBought: e.hasBought,
+                hasBought: !e.hasBought,
                 isSpicy: e.isSpicy,
               )// 다르면 e를 반환
             : e)
