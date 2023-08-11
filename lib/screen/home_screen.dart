@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_river/screen/provider_screen.dart';
+import 'package:flutter_river/screen/select_provider_screen.dart';
 import 'package:flutter_river/screen/state_notifier_provider_screen.dart';
 import 'package:flutter_river/screen/state_provider_screen.dart';
 import 'package:flutter_river/screen/stream_provider_screen.dart';
@@ -7,6 +9,7 @@ import '../layout/default_layout.dart';
 import 'auto_dispose_modifirer_screen.dart';
 import 'family_modifier_screen.dart';
 import 'future_provider_screen.dart';
+import 'listen_provider_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -70,6 +73,33 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: Text('AutoDisposeModifierScreen')
+          ),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => ListenProviderScreen(),
+                  ),
+                );
+              },
+              child: Text('ListenProviderScreen')
+          ),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => SelectProviderScreen(),
+                  ),
+                );
+              },
+              child: Text('SelectProviderScreen')
+          ),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => ProviderScreen(),
+                  ),
+                );
+              },
+              child: Text('ProviderScreen')
           ),
         ],
       ),
